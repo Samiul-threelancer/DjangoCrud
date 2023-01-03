@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, studet_form, StudentInfo, StudentUpdate
+from .views import index, studet_form, StudentInfo, StudentUpdate, StudentDelete
 
 app_name = 'first_app'
 
@@ -8,4 +8,5 @@ urlpatterns = [
     path('student_form', studet_form, name='student_form'),
     path('student_info/<int:student_id>/', StudentInfo, name='student_info'),
     path('student_update/<int:student_id>', StudentUpdate, name='student_update'),
+    path('student_delete/<int:student_id>', StudentDelete, name='student_delete'),
     ]
